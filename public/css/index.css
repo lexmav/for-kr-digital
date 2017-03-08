@@ -1,0 +1,899 @@
+body {
+    min-width: 1024px;
+    margin: 0 auto;
+    background-color: #ebebeb;
+}
+
+a {
+    text-decoration: none;
+    transition: all 250ms;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+nav {
+    background-color: #2e2e3b;
+}
+
+nav a {
+    padding: 8px 10px;
+    display: inline-block;
+    color: #7a7a92;
+    position: relative;
+    margin-right: 10px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 14px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid #7a7a92;
+    cursor: default;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a:last-child::after {
+    opacity: 0;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #5267ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 250ms;
+    position: relative;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #4758d2;
+}
+
+button.errButton {
+    background-color: #2e2e3b;
+    min-width: 160px;
+    text-align: left;
+}
+
+button.errButton:after {
+    content: "\2716";
+    position: absolute;
+    right: 5px;
+    border: 1px solid;
+    padding: 0 4px 2px 3px;
+    font-size: 9px;
+    border-radius: 50%;
+    color: #626262;
+}
+
+.mw {
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.horBlock {
+    overflow: auto;
+}
+
+.filter {
+    height: 50px;
+    background-color: #1d1d25;
+    overflow: hidden;
+}
+
+.filter .mw {
+    height: 100%;
+}
+
+.filter .search {
+    width: 296px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-image: url(../../public/img/search.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.filter .search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-top: 5px solid transparent;
+}
+
+.filter a {
+    display: inline-block;
+    padding: 14px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.filter .item {
+    border-top: 5px solid #4758d2;
+    color: #fff;
+    transition: all 250ms;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.filter .item::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    transition: all 250ms;
+}
+
+.filter .item.adv::before {
+    background-image: url(../../public/img/circle1.png);
+}
+
+.filter .item.save::before {
+    background-image: url(../../public/img/circle2.png);
+}
+
+.filter .item.null::before {
+    background-image: url(../../public/img/circle3.png);
+}
+
+.filter .item:hover {
+    background-color: #4758d2;
+}
+
+.filter .item.adv:hover::before {
+    background-image: url(../../public/img/circle1-0.png);
+}
+
+.filter .item.save:hover::before {
+    background-image: url(../../public/img/circle2-0.png);
+}
+
+.filter .item.null:hover::before {
+    background-image: url(../../public/img/circle3-0.png);
+}
+
+.filter .select {
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.filter .select::before {
+    content: "▼";
+    position: absolute;
+    color: #4758d2;
+    right: 0;
+    top: 20px;
+    font-size: 12px;
+}
+
+.filter .select select {
+    width: 100px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    border-top: 5px solid transparent;
+}
+
+.filter .select option {
+    color: #000;
+}
+
+.filter .login {
+    font-weight: bold;
+    color: #5267ff;
+    border-top: 5px solid transparent;
+}
+
+.filter .login:hover {
+    color: #fff;
+}
+
+.mainHeader {
+    height: 65px;
+    background-color: #4758d2;
+    color: #fff;
+}
+
+.mainHeader a {
+    color: #fff;
+}
+
+.mainHeader .mw {
+    height: 100%;
+}
+
+.mainHeader .logo {
+    vertical-align: middle;
+}
+
+.mainHeader .slogan {
+    vertical-align: middle;
+    margin-left: 33px;
+}
+
+.mainHeader .tel {
+    vertical-align: middle;
+    margin: 0 35px 0 15px;
+    padding-left: 20px;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center left;
+}
+
+.mainHeader .reg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    background-color: #5267ff;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+
+.mainSearch {
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.mainSearch input {
+    border: none;
+    outline: none;
+    padding: 18px 0 18px 30px;
+    box-sizing: border-box;
+    width: 930px;
+    background-color: transparent;
+    background-image: url(../../public/img/search.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.mainSearch button {
+    float: right;
+    margin-top: 8px;
+}
+
+.mw.mainMW {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.advSearch .make {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.advSearch .model {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.advSearch .title {
+    font-weight: bold;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 3px;
+    transition: all 250ms;
+    margin: 0;
+}
+
+.advSearch .item {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 3px;
+    transition: all 250ms;
+    margin: 0;
+}
+
+.advSearch .item:hover {
+    background-color: #5267ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.advSearch .item.disabled {
+    background-color: #eaeaea;
+    color: #000;
+    cursor: default;
+}
+
+.advSearch .count {
+    color: #a4a4a4;
+}
+
+.advFilter .countries label, .advFilter .countries input, .advFilter .countries img, .advFilter .countries span {
+    vertical-align: middle;
+}
+
+.advFilter .countries label {
+    cursor: pointer;
+}
+
+.advFilter .block {
+    width: 33.333%;
+    float: left;
+    margin: 20px 0 20px 0;
+}
+
+.advFilter .title {
+    display: inline-block;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+.advFilter select {
+    padding: 2px;
+    width: 164px;
+    vertical-align: top;
+}
+
+.advFilter .years select {
+    width: 80px;
+}
+
+.advFilter .panel {
+    margin-top: 30px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    text-align: right;
+}
+
+.advFilter .panel .errButton {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.advFilter .panel .goFilter {
+    width: 290px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.advFilter .panel .goFilter::after {
+    content: "\003E";
+    position: absolute;
+    right: 7px;
+    color: #a7b1ff;
+    font-weight: bold;
+    transform: scale(1, 1.7);
+}
+
+.textBanner {
+    font-size: 32px;
+    background-color: #2e2e3b;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    margin: 20px 0;
+    padding: 22px 0;
+}
+
+.auction .titleFilter {
+    position: relative;
+    margin: 30px 0 20px 0;
+}
+
+.auction .titleFilter h1 {
+    margin: 0;
+}
+
+.auction .titleFilter label {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.auction .block {
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 250ms;
+    border: 4px solid transparent;
+    border-left-color: #5267ff;
+    margin-bottom: 15px;
+    overflow: auto;
+    color: #4a4a4a;
+    overflow: hidden;
+}
+
+.auction .block:hover {
+    border-color: #5267ff;
+}
+
+.auction .block:hover .rates {
+    background-color: #5267ff;
+}
+
+.auction .block div {
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 20px 0;
+}
+
+.auction .block p {
+    margin: 0 0 5px 0;
+}
+
+.auction .block img {
+    vertical-align: middle;
+}
+
+.auction .block .img {
+    width: 15%;
+    float: left;
+    position: relative;
+}
+
+.auction .block .titles {
+    width: 30%;
+    float: left;
+}
+
+.auction .block .titles .title {
+    font-weight: bold;
+    color: #000;
+    margin-right: 8px;
+}
+
+.auction .block .titles .title img {
+    margin-left: 8px;
+}
+
+.auction .block .date {
+    width: 18%;
+    float: left;
+}
+
+.auction .block .times {
+    width: 12%;
+    float: left;
+}
+
+.auction .block .quantity {
+    width: 10%;
+    float: left;
+}
+
+.auction .block .quantity .count {
+    font-weight: bold;
+}
+
+.auction .block .rates {
+    width: 15%;
+    float: left;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #2e2e3b;
+    color: #fff;
+    text-align: center;
+    transition: all 250ms;
+    position: relative;
+    left: 1px;
+}
+
+.textBannerCar {
+    font-size: 32px;
+    background-color: #2e2e3b;
+    background-image: url(../../public/img/backcar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    margin: 20px 0;
+    padding: 22px 0;
+}
+
+.slider {
+    background-color: #fff;
+    border-bottom: 2px solid #ebebeb;
+    box-sizing: border-box;
+    padding: 30px 0 20px 0;
+    position: relative;
+}
+
+.slider .block {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.slider .block img {
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.slider .block p {
+    margin: 0 0 5px 0;
+}
+
+.slider .block .title {
+    font-weight: bold;
+}
+
+.parthners {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px 0 120px 0;
+}
+
+.parthCont .block {
+    width: 16.6666666%;
+    height: 80px;
+    float: left;
+    position: relative;
+}
+
+.parthCont img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+footer {
+    background-color: #2e2e3b;
+    padding: 50px 0;
+    border-top: 4px solid #5267ff;
+    overflow: auto;
+}
+
+.footMenu .block {
+    float: left;
+    box-sizing: border-box;
+}
+
+.footMenu .block1 {
+    margin-right: 100px;
+}
+
+.footMenu .item {
+    color: #fff;
+}
+
+.footMenu a.item:hover {
+    text-decoration: underline;
+}
+
+.sliderCont {
+    overflow: hidden;
+    height: 170px;
+}
+
+.sliderCont .block {
+    transition: all 500ms;
+    position: relative;
+}
+
+.slider .moveBut {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 2px solid #3745ad;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    z-index: 1;
+    transition: all 250ms;
+}
+
+.slider .moveBut:hover {
+    background-color: #ababab;
+}
+
+.slider .moveBut::after {
+    position: absolute;
+    color: #3745ad;
+    font-size: 25px;
+    top: 6px;
+    font-weight: bold;
+    transform: scale(1, 1.7);
+}
+
+.slider .toLeft {
+    left: 0;
+    margin-top: -20px;
+}
+
+.slider .toLeft::after {
+    content: "\003C";
+    left: 10px;
+}
+
+.slider .toRight {
+    right: 0;
+    margin-top: -20px;
+}
+
+.slider .toRight::after {
+    content: "\003E";
+    right: 10px;
+}
+
+
+/*Modals*/
+
+@keyframes modal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal {
+    display: none;
+}
+
+.modal.active {
+    display: block;
+    animation: modal 500ms;
+}
+
+.modalContent {
+    width: 550px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 30px 0;
+    z-index: 3;
+}
+
+.modalClose {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transition: all 250ms;
+    box-sizing: border-box;
+    padding: 8px 0 0px 13px;
+}
+
+.modalClose:hover {
+    background-color: #5267ff;
+    color: #fff;
+}
+
+.modal .modalBack {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 2;
+}
+
+.modal .title {
+    text-align: center;
+    color: #717171;
+}
+
+.modal input, .modal textarea {
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid #e7e7e7;
+    border-radius: 2px;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    outline-color: #5267ff;
+}
+
+.modal .block {
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.modal .horBlock {
+    padding: 0 25px;
+}
+
+.modal .horBlock .block {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+
+.modal .panel {
+    padding-top: 10px;
+}
+
+.modal .panel .block {
+    width: 33.333%;
+}
+
+.modal .panel button {
+    width: 100%;
+    padding: 16px 15px;
+}
+
+.modal .carValues {
+    padding-bottom: 10px;
+}
+
+.modal .userValues {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    background-color: #e6e5e5;
+}
+
+.modal .userValues input, .modal .userValues textarea {
+    background-color: #fff;
+}
+
+.modal .userValues textarea {
+    margin-top: 10px;
+}
+
+.modal.modalReg .panel input {
+    width: auto;
+}
+
+.modal.modalReg .panel label {
+    display: inline-block;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.modal.modalReg .panel .block {
+    width: 50%;
+}
+
+.modal.modalReg .strip {
+    width: 100%;
+    height: 10px;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+
+.modal.modalReg .blue {
+    width: 0;
+    height: 100%;
+    display: block;
+    float: left;
+    background-color: #ff5252;
+    transition: all 250ms;
+}
+
+.modal.modalReg .level2 .blue {
+    background-color: #5267ff;
+}
+
+.modal.modalReg .level3 .blue {
+    background-color: #55ff52;
+}
+
+.modal.modalReg .blue.active {
+    width: 10%;
+}
+
+.modal.modalLog .modalContent {
+    background-color: #4758d2;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+.modal.modalLog .title {
+    color: #a7b2ff;
+}
+
+.modal.modalLog input {
+    background-color: #3745ad;
+    border-color: #4f61dc;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.modal.modalLog .submOrder {
+    background-color: #fff;
+    color: #3745ad;
+    width: 120px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    transition: all 250ms;
+}
+
+.modal.modalLog .submOrder:hover {
+    background-color: #a7b2ff;
+}
+
+.modal.modalLog .panel {
+    margin-top: 50px;
+    padding: 0;
+}
+
+.modal.modalLog .panel a {
+    background-color: #3745ad;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 250ms;
+    text-transform: uppercase;
+}
+
+.modal.modalLog .panel a:hover {
+    background-color: #fff;
+    color: #3745ad;
+}
+
+.modal.modalLog .panel .block:first-child a {
+    border-right: 1px solid #4758d2;
+}
+
+.modal.modalLog .panel .block {
+    width: 50%;
+    padding: 0;
+}
+
+.modal.modalLog .modalClose {
+    background-color: #3745ad;
+}
+
+.modal.modalLog .modalClose:hover {
+    background-color: #a7b2ff;
+}
+
+
+/**/
